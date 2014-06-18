@@ -114,7 +114,7 @@ function takeScreenshot(name, dest, w, h) {
 	setTimeout(function() {
 		fs.unlink(to);
 		return returned;
-	}, 6000);
+	}, 1500); // #YOLO
 }
 
 gulp.task('package', function() {
