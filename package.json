@@ -12,6 +12,7 @@
     "gulp-uglify": "*",
     "gulp-w3cjs": "*",
     "gulp-webshot": "0.0.2",
+    "gulp-zip": "^0.3.4",
     "imagemin-gifsicle": "*",
     "imagemin-jpegtran": "*"
   }

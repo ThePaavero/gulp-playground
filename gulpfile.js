@@ -1,5 +1,6 @@
 
 var gulp = require('gulp');
+
 var fs = require('fs');
 
 var concat = require('gulp-concat');
@@ -14,6 +15,8 @@ var w3cjs = require('gulp-w3cjs');
 
 var connect = require('gulp-connect');
 var webshot=require('gulp-webshot');
+
+var zip = require('gulp-zip');
 
 var paths = {
 	scripts: ['js/**/*.js'],
@@ -114,5 +117,19 @@ function takeScreenshot(name, dest, w, h) {
 	}, 6000);
 }
 
+gulp.task('package', function() {
+
+	var date = Date.now();
+
+	var filename = date + '.zip';
+
+	console.log('Creating ' + filename);
+
+	gulp.src('./build/**/*')
+		.pipe(zip(filename))
+		.pipe(gulp.dest('./packages'));
+});
+
 gulp.task('default', ['scripts', 'images', 'styles', 'html', 'watch']);
 gulp.task('shots', ['connect', 'webshot']);
+gulp.task('zip', ['package']);
