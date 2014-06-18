@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-browserify": "^0.5.0",
+    "gulp-concat": "*",
+    "gulp-connect": "^2.0.5",
+    "gulp-cssmin": "*",
+    "gulp-htmlmin": "*",
+    "gulp-imagemin": "*",
+    "gulp-sass": "*",
+    "gulp-uglify": "*",
+    "gulp-w3cjs": "*",
+    "gulp-webshot": "0.0.2",
+    "imagemin-gifsicle": "*",
+    "imagemin-jpegtran": "*"
+  }
+}
